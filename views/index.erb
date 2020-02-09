@@ -21,6 +21,14 @@
       <li>
         <p><%= content.name %></p>
         <p><%= content.body %></p>
+        <span>
+          <form action="/delete/<%= content.id %>" method="post" >
+            <input type="submit" value="DELETE">
+          </form>
+        </span>
+        <span>
+          <a href="/edit/<%= content.id %>">EDIT</a>
+        </span>
       </li>
     <% end %>
   </ul>
