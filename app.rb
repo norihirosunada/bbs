@@ -55,3 +55,12 @@ post '/renew/:id' do
     })
     redirect '/'
 end
+
+post '/good/:id' do
+    content = Contribution.find(params[:id])
+    good = content.good
+    content.update({
+        good: good + 1
+    })
+    redirect '/'
+end
